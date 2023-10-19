@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class WheelTurn : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float maxTurnAngle = 10f; // Maximum turn angle in degrees
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        float turnInput = Input.GetAxis("Horizontal"); // Input for left/right steering
+
+        float turnAngle = maxTurnAngle * turnInput;
+
+        Vector3 currentRotation = transform.localRotation.eulerAngles;
+        currentRotation.y = turnAngle;
+        transform.localRotation = Quaternion.Euler(currentRotation);
     }
 }

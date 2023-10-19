@@ -947,6 +947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 144150ec8e8b6cb4c93516aaf9b39701, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxTurnAngle: 10
 --- !u!114 &435121665
 MonoBehaviour:
   m_ObjectHideFlags: 0
