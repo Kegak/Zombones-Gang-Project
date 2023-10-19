@@ -16,7 +16,7 @@ public class AIController : MonoBehaviour
 
         agent = GetComponent<NavMeshAgent>();
 
-        agent.SetDestination(destination.transform.position);
+        // agent.SetDestination(destination.transform.position);
     }
 
     void Update() 

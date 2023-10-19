@@ -2026,8 +2026,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1750196136861669351, guid: 587c45d7455ba474aa80bfd373c31bff, type: 3}
+      propertyPath: limitX
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1750196136861669351, guid: 587c45d7455ba474aa80bfd373c31bff, type: 3}
+      propertyPath: limitZ
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1750196136861669351, guid: 587c45d7455ba474aa80bfd373c31bff, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1750196136861669351, guid: 587c45d7455ba474aa80bfd373c31bff, type: 3}
+      propertyPath: upperLimitX
+      value: 340
+      objectReference: {fileID: 0}
+    - target: {fileID: 1750196136861669351, guid: 587c45d7455ba474aa80bfd373c31bff, type: 3}
+      propertyPath: upperLimitZ
+      value: 340
       objectReference: {fileID: 0}
     - target: {fileID: 2601437791606025147, guid: 587c45d7455ba474aa80bfd373c31bff, type: 3}
       propertyPath: m_Name

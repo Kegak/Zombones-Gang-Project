@@ -4,23 +4,47 @@ using UnityEngine;
 
 public class keepUpright : MonoBehaviour
 {
-    public float limitX = 15f;
-    public float upperLimitX = 345f;
-    public float limitZ = 10f;
-    public float upperLimitZ = 350f;
+    private float limitX = 30f;
+    private float upperLimitX = 330f;
+    private float limitZ = 10;
+    private float upperLimitZ = 350f;
+    private float dampening = 20;
     void Update()
     {  
-
         if(Mathf.Abs(transform.localEulerAngles.x) > limitX && Mathf.Abs(transform.localEulerAngles.x) < upperLimitX) 
         {
-            transform.rotation = Quaternion.Euler(0, transform.rotation.y, transform.rotation.z);
-            Debug.Log("Adjusted! " + transform.rotation);
+            Debug.Log((transform.localEulerAngles.x, transform.localEulerAngles.z));
+            if(transform.localEulerAngles.x > 180)
+            {
+                float target = 360f;
+                float angle = Mathf.Lerp(transform.localEulerAngles.x, target, Time.deltaTime * dampening);
+                transform.eulerAngles = new Vector3(angle, transform.localEulerAngles.y, transform.localEulerAngles.z);
+            }
+            else
+            {
+                float target = 0;
+                float angle = Mathf.Lerp(transform.localEulerAngles.x, target, Time.deltaTime * dampening);
+                transform.eulerAngles = new Vector3(angle, transform.localEulerAngles.y, transform.localEulerAngles.z);
+            }
+            Debug.Log((transform.localEulerAngles.x, transform.localEulerAngles.z));
         }
 
         if(Mathf.Abs(transform.localEulerAngles.z) > limitZ && Mathf.Abs(transform.localEulerAngles.z) < upperLimitZ) 
         {
-            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 0);
-            Debug.Log("Adjusted! " + transform.rotation);
+            Debug.Log((transform.localEulerAngles.x, transform.localEulerAngles.z));
+            if(transform.localEulerAngles.z > 180)
+            {
+                float target = 360f;
+                float angle = Mathf.Lerp(transform.localEulerAngles.z, target, Time.deltaTime * dampening);
+                transform.eulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, angle);
+            }
+            else
+            {
+                float target = 0f;
+                float angle = Mathf.Lerp(transform.localEulerAngles.z, target, Time.deltaTime * dampening);
+                transform.eulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, angle);;
+            }
+            Debug.Log((transform.localEulerAngles.x, transform.localEulerAngles.z));
         }
     }
 }
