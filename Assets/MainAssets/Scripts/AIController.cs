@@ -36,7 +36,7 @@ public class AIController : MonoBehaviour
         {
             agent.SetDestination(destination.transform.position);
             PlaySound();
-            animator.SetFloat("forward", 1.0f);
+            animator.SetFloat("forward", 2.0f);
         }
 
         else
@@ -50,7 +50,7 @@ public class AIController : MonoBehaviour
         }
         if (targetDist <= agent.stoppingDistance)
         {
-            animator.SetFloat("forward", 1.0f);
+            animator.SetFloat("forward", 2.0f);
             FaceTarget();
         }
 
