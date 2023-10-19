@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 93550a0d683248142a984a56db9b4072, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.0238323
+      value: -23.320244
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 93550a0d683248142a984a56db9b4072, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1497648
+      value: -1.1239803
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 93550a0d683248142a984a56db9b4072, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.92972
+      value: 1.2606201
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 93550a0d683248142a984a56db9b4072, type: 3}
       propertyPath: m_LocalRotation.w
@@ -26,15 +26,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 93550a0d683248142a984a56db9b4072, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 93550a0d683248142a984a56db9b4072, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 93550a0d683248142a984a56db9b4072, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 93550a0d683248142a984a56db9b4072, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -47,6 +47,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 93550a0d683248142a984a56db9b4072, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 93550a0d683248142a984a56db9b4072, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 93550a0d683248142a984a56db9b4072, type: 3}
       propertyPath: m_Name
@@ -141,7 +145,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 207fc8cfbc6aa4009ac5290b7cd63284, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.406
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -185,7 +189,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
