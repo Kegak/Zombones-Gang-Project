@@ -711,6 +711,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a190f0b4a1e3fdb408197bf915e6eede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &448091849 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 614477667632184437, guid: f71831f15c9cc8642aec6d6c3802a51b, type: 3}
+  m_PrefabInstance: {fileID: 2743404574549506232}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &448091854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448091849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a190f0b4a1e3fdb408197bf915e6eede, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!208 &448091855
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448091849}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 146.35501, y: 119.674, z: 25.380001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -2306.4841, y: 598.997, z: -2134.079}
+  m_TimeToStationary: 0.5
 --- !u!1 &461099872
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,7 +753,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 461099875}
-  - component: {fileID: 461099874}
   - component: {fileID: 461099873}
   m_Layer: 0
   m_Name: Ramps
@@ -759,37 +791,6 @@ MonoBehaviour:
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: f1f22b5e9a5e711488e1f4759fbeb6c1, type: 2}
-  m_BuildHeightMesh: 0
---- !u!114 &461099874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 461099872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 0}
   m_BuildHeightMesh: 0
 --- !u!4 &461099875
 Transform:
@@ -3388,6 +3389,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1282199337}
     m_Modifications:
+    - target: {fileID: 614477667632184437, guid: f71831f15c9cc8642aec6d6c3802a51b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1702298733875706075, guid: f71831f15c9cc8642aec6d6c3802a51b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.21812128
@@ -3444,6 +3449,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: LuigiMansion_Map
       objectReference: {fileID: 0}
+    - target: {fileID: 5209691207239123532, guid: f71831f15c9cc8642aec6d6c3802a51b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9063685131476151975, guid: f71831f15c9cc8642aec6d6c3802a51b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3466,6 +3479,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7700092086778044291, guid: f71831f15c9cc8642aec6d6c3802a51b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 112466994}
+    - targetCorrespondingSourceObject: {fileID: 614477667632184437, guid: f71831f15c9cc8642aec6d6c3802a51b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 448091854}
+    - targetCorrespondingSourceObject: {fileID: 614477667632184437, guid: f71831f15c9cc8642aec6d6c3802a51b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 448091855}
     - targetCorrespondingSourceObject: {fileID: 1188898553535607837, guid: f71831f15c9cc8642aec6d6c3802a51b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2033439648}
