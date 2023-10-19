@@ -4,36 +4,23 @@ using UnityEngine;
 
 public class keepUpright : MonoBehaviour
 {
-    [Header("This script doesn't work lol")]
-    [Header("So DO NOT use this right now")]
     public float limitX = 15f;
+    public float upperLimitX = 345f;
     public float limitZ = 10f;
-    //private static Quaternion rot = this.Transform.rotation;
-
-    // Update is called once per frame
+    public float upperLimitZ = 350f;
     void Update()
     {  
-        // X is rotating OVER bounds
-        if(transform.rotation.x > Mathf.Abs(limitX)) 
+
+        if(Mathf.Abs(transform.localEulerAngles.x) > limitX && Mathf.Abs(transform.localEulerAngles.x) < upperLimitX) 
         {
-            transform.rotation = Quaternion.Euler(Mathf.Abs(limitX), transform.rotation.y, transform.rotation.z);
-        }
-        // X is rotating UNDER bounds
-        else if(transform.rotation.x < -Mathf.Abs(limitX))
-        {
-            transform.rotation = Quaternion.Euler(-Mathf.Abs(limitX), transform.rotation.y, transform.rotation.z);
+            transform.rotation = Quaternion.Euler(0, transform.rotation.y, transform.rotation.z);
+            Debug.Log("Adjusted! " + transform.rotation);
         }
 
-        // Z is rotating OVER bounds
-        if(transform.rotation.z > Mathf.Abs(limitZ)) 
+        if(Mathf.Abs(transform.localEulerAngles.z) > limitZ && Mathf.Abs(transform.localEulerAngles.z) < upperLimitZ) 
         {
-            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, Mathf.Abs(limitZ));
+            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 0);
+            Debug.Log("Adjusted! " + transform.rotation);
         }
-        // Z is rotating UNDER bounds
-        else if(transform.rotation.z < -Mathf.Abs(limitZ))
-        {
-            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, -Mathf.Abs(limitZ));
-        }
-
     }
 }
