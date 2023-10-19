@@ -26,7 +26,7 @@ public class AIController : MonoBehaviour
 
         Debug.Log(targetDist);
 
-        if(targetDist < 12)
+        if(targetDist < 15)
         {
             agent.SetDestination(destination.transform.position);
         }
